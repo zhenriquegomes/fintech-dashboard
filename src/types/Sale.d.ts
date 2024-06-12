@@ -1,9 +1,9 @@
 interface Sale {
 	id: string;
-	name: string;
-	price: string;
+	nome: string;
+	preco: number;
 	status: string;
-	formOfPayment: "boleto" | "pix" | "cartao";
+	pagamento: "boleto" | "pix" | "cartao";
 	data: string;
-	installments: number | null;
+	parcelas: number | null;
 }
