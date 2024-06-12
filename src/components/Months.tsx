@@ -24,7 +24,7 @@ const Months = () => {
 		setFinalDate(formatDate(lastDay));
 	}
 	const buttons = [];
-	for (let i = -5; i <= 0; i++) {
+	for (let i = -3; i <= 0; i++) {
 		buttons.push(
 			<Button key={i} variant="outlined" onClick={() => setNthMonth(i)}>
 				{getNthMonthName(i)}
@@ -32,7 +32,7 @@ const Months = () => {
 		);
 	}
 	return (
-		<Stack direction="row" spacing={2} justifyContent="center">
+		<Stack direction="row" spacing={2}>
 			{buttons}
 		</Stack>
 	);
