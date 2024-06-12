@@ -1,16 +1,17 @@
+import { Box, Container } from "@mui/material";
 import Header from "./components/Header";
 import SideNav from "./components/SideNav";
 import Resumo from "./pages/Resumo";
 
 function App() {
 	return (
-		<div>
+		<Container>
 			<SideNav />
-			<main>
+			<Box>
 				<Header />
 				<Resumo />
-			</main>
-		</div>
+			</Box>
+		</Container>
 	);
 }
 

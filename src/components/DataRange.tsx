@@ -1,27 +1,31 @@
-import { Input, InputLabel, Stack } from "@mui/material";
+import { Box, Input, InputLabel, Paper, Stack } from "@mui/material";
 import useSales from "../hooks/useSales";
 
 const DateRange = () => {
 	const { initialDate, setInitialDate, finalDate, setFinalDate } = useSales();
 	return (
-		<Stack direction="row" spacing={2} justifyContent="center">
-			<div>
-				<InputLabel>Initial Date</InputLabel>
-				<Input
-					type="date"
-					value={initialDate}
-					onChange={({ target }) => setInitialDate(target.value)}
-				/>
-			</div>
-			<div>
-				<InputLabel>Final Date</InputLabel>
-				<Input
-					type="date"
-					value={finalDate}
-					onChange={({ target }) => setFinalDate(target.value)}
-				/>
-			</div>
-		</Stack>
+		<Paper
+			sx={{ width: "fit-content", padding: 2, backgroundColor: "#90caf9" }}
+		>
+			<Stack direction="row" spacing={2}>
+				<Box>
+					<InputLabel>Initial Date</InputLabel>
+					<Input
+						type="date"
+						value={initialDate}
+						onChange={({ target }) => setInitialDate(target.value)}
+					/>
+				</Box>
+				<Box>
+					<InputLabel>Final Date</InputLabel>
+					<Input
+						type="date"
+						value={finalDate}
+						onChange={({ target }) => setFinalDate(target.value)}
+					/>
+				</Box>
+			</Stack>
+		</Paper>
 	);
 };
 
