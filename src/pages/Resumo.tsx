@@ -7,7 +7,7 @@ const Resumo = () => {
 	if (!data) return null;
 	data.forEach((sale) => console.log(sale.preco));
 	return (
-		<Stack direction="row" spacing={2}>
+		<Stack direction="row" spacing={2} marginBottom={3}>
 			<SaleResume
 				name="Sales"
 				value={data

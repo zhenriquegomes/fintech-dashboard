@@ -2,6 +2,7 @@ import { Box, Container } from "@mui/material";
 import Header from "./components/Header";
 import SideNav from "./components/SideNav";
 import Resumo from "./pages/Resumo";
+import SalesList from "./components/SalesList";
 
 function App() {
 	return (
@@ -10,6 +11,7 @@ function App() {
 			<Box>
 				<Header />
 				<Resumo />
+				<SalesList />
 			</Box>
 		</Container>
 	);
