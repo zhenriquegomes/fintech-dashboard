@@ -13,7 +13,10 @@ const SalesList = () => {
 	const { data } = useSales();
 	if (!data) return null;
 	return (
-		<TableContainer component={Paper} sx={{ backgroundColor: "#90caf9" }}>
+		<TableContainer
+			component={Paper}
+			sx={{ backgroundColor: "#90caf9", marginBottom: "4rem" }}
+		>
 			<Table>
 				<TableHead>
 					<TableRow>
