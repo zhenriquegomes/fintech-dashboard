@@ -3,9 +3,10 @@ import Box from "@mui/material/Box";
 import BottomNavigation from "@mui/material/BottomNavigation";
 import BottomNavigationAction from "@mui/material/BottomNavigationAction";
 import { MonetizationOn, Receipt } from "@mui/icons-material";
+import { Link } from "react-router-dom";
 
 export default function BottomNav() {
-	const [value, setValue] = React.useState(0);
+	const [value, setValue] = React.useState("");
 
 	return (
 		<Box
@@ -26,8 +27,18 @@ export default function BottomNav() {
 					setValue(newValue);
 				}}
 			>
-				<BottomNavigationAction label="Resume" icon={<Receipt />} />
-				<BottomNavigationAction label="Sales" icon={<MonetizationOn />} />
+				<BottomNavigationAction
+					component={Link}
+					to="/"
+					label="Summary"
+					icon={<Receipt />}
+				/>
+				<BottomNavigationAction
+					component={Link}
+					to="/sales"
+					label="Sales"
+					icon={<MonetizationOn />}
+				/>
 			</BottomNavigation>
 		</Box>
 	);
