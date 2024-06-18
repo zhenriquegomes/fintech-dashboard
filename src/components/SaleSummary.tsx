@@ -1,6 +1,6 @@
 import { Paper, Typography } from "@mui/material";
 
-const SaleResume = ({ name, value }: { name: string; value: number }) => {
+const SaleSummary = ({ name, value }: { name: string; value: number }) => {
 	return (
 		<Paper sx={{ padding: 1, width: "10rem", backgroundColor: "#90caf9" }}>
 			<Typography variant="h5">{name}</Typography>
@@ -11,4 +11,4 @@ const SaleResume = ({ name, value }: { name: string; value: number }) => {
 	);
 };
 
-export default SaleResume;
+export default SaleSummary;

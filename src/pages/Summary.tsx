@@ -1,26 +1,26 @@
 import { Stack } from "@mui/material";
 import useSales from "../hooks/useSales";
-import SaleResume from "../components/SaleResume";
+import SaleSummary from "../components/SaleSummary";
 
-const Resumo = () => {
+const Summary = () => {
 	const { data } = useSales();
 	if (!data) return null;
 	data.forEach((sale) => console.log(sale.preco));
 	return (
 		<Stack direction="row" spacing={2} marginBottom={3}>
-			<SaleResume
+			<SaleSummary
 				name="Sales"
 				value={data
 					.filter((sale) => sale.status != "falha")
 					.reduce((sum, sale) => sum + sale.preco, 0)}
 			/>
-			<SaleResume
+			<SaleSummary
 				name="Received"
 				value={data
 					.filter((sale) => sale.status === "pago")
 					.reduce((sum, sale) => sum + sale.preco, 0)}
 			/>
-			<SaleResume
+			<SaleSummary
 				name="Processing"
 				value={data
 					.filter((sale) => sale.status === "processando")
@@ -30,4 +30,4 @@ const Resumo = () => {
 	);
 };
 
-export default Resumo;
+export default Summary;
