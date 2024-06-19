@@ -1,9 +1,9 @@
-import Box from "@mui/material/Box";
 import BottomNavigation from "@mui/material/BottomNavigation";
 import BottomNavigationAction from "@mui/material/BottomNavigationAction";
 import { MonetizationOn, Receipt } from "@mui/icons-material";
 import { Link, useLocation } from "react-router-dom";
 import { useEffect, useState } from "react";
+import { Paper } from "@mui/material";
 
 export default function BottomNav() {
 	const [page, setPage] = useState(0);
@@ -17,13 +17,14 @@ export default function BottomNav() {
 	}, [location, page]);
 
 	return (
-		<Box
+		<Paper
 			sx={{
 				position: "fixed",
 				bottom: 0,
 				left: 0,
 				width: "100%",
 			}}
+			elevation={5}
 		>
 			<BottomNavigation
 				sx={{
@@ -50,6 +51,6 @@ export default function BottomNav() {
 					icon={<MonetizationOn />}
 				/>
 			</BottomNavigation>
-		</Box>
+		</Paper>
 	);
 }
