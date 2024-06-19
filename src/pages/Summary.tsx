@@ -1,11 +1,11 @@
-import { Stack } from "@mui/material";
+import { CircularProgress, Stack } from "@mui/material";
 import useSales from "../hooks/useSales";
 import SaleSummary from "../components/SaleSummary";
 
 const Summary = () => {
-	const { data } = useSales();
+	const { data, loading } = useSales();
+	if (loading) return <CircularProgress size="5rem" />;
 	if (!data) return null;
-	data.forEach((sale) => console.log(sale.preco));
 	return (
 		<Stack direction="row" spacing={2} marginBottom={3}>
 			<SaleSummary
