@@ -1,12 +1,20 @@
-import * as React from "react";
 import Box from "@mui/material/Box";
 import BottomNavigation from "@mui/material/BottomNavigation";
 import BottomNavigationAction from "@mui/material/BottomNavigationAction";
 import { MonetizationOn, Receipt } from "@mui/icons-material";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
+import { useEffect, useState } from "react";
 
 export default function BottomNav() {
-	const [value, setValue] = React.useState("");
+	const [page, setPage] = useState(0);
+	const location = useLocation();
+	useEffect(() => {
+		if (location.pathname === "/") {
+			setPage(0);
+		} else if (location.pathname === "/sales") {
+			setPage(1);
+		}
+	}, [location, page]);
 
 	return (
 		<Box
@@ -22,9 +30,9 @@ export default function BottomNav() {
 					backgroundColor: "#90caf9",
 				}}
 				showLabels
-				value={value}
-				onChange={(_, newValue) => {
-					setValue(newValue);
+				value={page}
+				onChange={(_, page) => {
+					setPage(page);
 				}}
 			>
 				<BottomNavigationAction
