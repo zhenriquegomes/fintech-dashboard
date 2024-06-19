@@ -31,12 +31,14 @@ export default function BottomNav() {
 					component={Link}
 					to="/"
 					label="Summary"
+					showLabel={true}
 					icon={<Receipt />}
 				/>
 				<BottomNavigationAction
 					component={Link}
 					to="/sales"
 					label="Sales"
+					showLabel={true}
 					icon={<MonetizationOn />}
 				/>
 			</BottomNavigation>
