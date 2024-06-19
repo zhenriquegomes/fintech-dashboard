@@ -1,4 +1,5 @@
 import {
+	CircularProgress,
 	Paper,
 	Table,
 	TableBody,
@@ -10,7 +11,8 @@ import {
 import useSales from "../hooks/useSales";
 
 const SalesList = () => {
-	const { data } = useSales();
+	const { data, loading } = useSales();
+	if (loading) return <CircularProgress size="5rem" />;
 	if (!data) return null;
 	return (
 		<TableContainer
@@ -27,7 +29,7 @@ const SalesList = () => {
 				</TableHead>
 				<TableBody>
 					{data.map((sale) => (
-						<TableRow>
+						<TableRow key={sale.id}>
 							<TableCell>{sale.id}</TableCell>
 							<TableCell>{sale.nome}</TableCell>
 							<TableCell>
