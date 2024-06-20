@@ -7,3 +7,5 @@ interface Sale {
 	data: string;
 	parcelas: number | null;
 }
+
+type SaleDetail = Omit<Sale, "data">;
