@@ -9,6 +9,7 @@ import {
 	TableRow,
 } from "@mui/material";
 import useSales from "../hooks/useSales";
+import { Link } from "react-router-dom";
 
 const SalesList = () => {
 	const { data, loading } = useSales();
@@ -30,7 +31,11 @@ const SalesList = () => {
 				<TableBody>
 					{data.map((sale) => (
 						<TableRow key={sale.id}>
-							<TableCell>{sale.id}</TableCell>
+							<TableCell>
+								<Link to={`/sales/${sale.id}`} style={{ color: "inherit" }}>
+									{sale.id}
+								</Link>
+							</TableCell>
 							<TableCell>{sale.nome}</TableCell>
 							<TableCell>
 								{sale.preco.toLocaleString("en", {
