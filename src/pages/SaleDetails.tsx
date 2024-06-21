@@ -1,5 +1,5 @@
-import { CircularProgress } from "@mui/material";
-import { useParams } from "react-router-dom";
+import { Box, Button, CircularProgress } from "@mui/material";
+import { Link, useParams } from "react-router-dom";
 import SaleInfo from "../components/SaleInfo";
 import useFetch from "../hooks/useFetch";
 
@@ -10,7 +10,16 @@ const SaleDetails = () => {
 	);
 	if (loading) return <CircularProgress size="5rem" />;
 	if (!data) return null;
-	return <SaleInfo sale={data} />;
+	return (
+		<Box>
+			<Link to="/sales">
+				<Button sx={{ marginBottom: 2 }} variant="outlined">
+					Voltar
+				</Button>
+			</Link>
+			<SaleInfo sale={data} />
+		</Box>
+	);
 };
 
 export default SaleDetails;
