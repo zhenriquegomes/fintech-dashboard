@@ -25,7 +25,12 @@ const Months = () => {
 	const buttons = [];
 	for (let i = -3; i <= 0; i++) {
 		buttons.push(
-			<Button key={i} variant="outlined" onClick={() => setNthMonth(i)}>
+			<Button
+				sx={{ width: "100%" }}
+				key={i}
+				variant="outlined"
+				onClick={() => setNthMonth(i)}
+			>
 				{getNthMonthName(i)}
 			</Button>
 		);
