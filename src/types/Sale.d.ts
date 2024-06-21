@@ -2,7 +2,7 @@ interface Sale {
 	id: string;
 	nome: string;
 	preco: number;
-	status: string;
+	status: "pago" | "falha" | "processando";
 	pagamento: "boleto" | "pix" | "cartao";
 	data: string;
 	parcelas: number | null;

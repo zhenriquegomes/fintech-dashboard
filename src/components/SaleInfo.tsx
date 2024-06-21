@@ -2,7 +2,7 @@ import { Card, CardContent, Typography } from "@mui/material";
 
 const SaleInfo = ({ sale }: { sale: SaleDetail }) => {
 	return (
-		<Card sx={{ backgroundColor: "#90caf9" }}>
+		<Card>
 			<CardContent>
 				<Typography>ID: {sale.id}</Typography>
 				<Typography>Name: {sale.nome}</Typography>

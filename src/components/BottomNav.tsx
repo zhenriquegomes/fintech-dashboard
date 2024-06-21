@@ -27,9 +27,6 @@ export default function BottomNav() {
 			elevation={5}
 		>
 			<BottomNavigation
-				sx={{
-					backgroundColor: "#90caf9",
-				}}
 				showLabels
 				value={page}
 				onChange={(_, page) => {
