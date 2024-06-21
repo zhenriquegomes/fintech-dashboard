@@ -4,7 +4,7 @@ import useSales from "../hooks/useSales";
 const DateRange = () => {
 	const { initialDate, setInitialDate, finalDate, setFinalDate } = useSales();
 	return (
-		<Paper sx={{ width: "fit-content", padding: 2 }}>
+		<Paper sx={{ width: "fit-content", padding: 2 }} elevation={3}>
 			<Stack direction="row" spacing={2}>
 				<Box>
 					<InputLabel>Initial Date</InputLabel>

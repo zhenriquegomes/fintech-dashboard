@@ -1,4 +1,4 @@
-import { Box, CircularProgress, Stack } from "@mui/material";
+import { Box, CircularProgress, Paper, Stack } from "@mui/material";
 import useSales from "../hooks/useSales";
 import SaleSummary from "../components/SaleSummary";
 import Chart from "../components/Chart";
@@ -9,7 +9,7 @@ const Summary = () => {
 	if (!data) return null;
 	return (
 		<Box marginBottom={3}>
-			<Stack direction="row" spacing={2}>
+			<Stack direction="row" spacing={2} marginBottom={3}>
 				<SaleSummary
 					name="Sales"
 					value={data
@@ -29,7 +29,9 @@ const Summary = () => {
 						.reduce((sum, sale) => sum + sale.preco, 0)}
 				/>
 			</Stack>
-			<Chart sales={data} />
+			<Paper sx={{ padding: 2 }} elevation={3}>
+				<Chart sales={data} />
+			</Paper>
 		</Box>
 	);
 };

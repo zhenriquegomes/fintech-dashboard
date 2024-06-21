@@ -24,7 +24,7 @@ export default function BottomNav() {
 				left: 0,
 				width: "100%",
 			}}
-			elevation={5}
+			elevation={3}
 		>
 			<BottomNavigation
 				showLabels

@@ -16,7 +16,11 @@ const SalesList = () => {
 	if (loading) return <CircularProgress size="5rem" />;
 	if (!data) return null;
 	return (
-		<TableContainer component={Paper} sx={{ marginBottom: "4rem" }}>
+		<TableContainer
+			elevation={3}
+			component={Paper}
+			sx={{ marginBottom: "4rem" }}
+		>
 			<Table>
 				<TableHead>
 					<TableRow>
