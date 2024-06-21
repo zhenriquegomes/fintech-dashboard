@@ -11,19 +11,19 @@ const Summary = () => {
 		<Box marginBottom={3}>
 			<Stack direction="row" spacing={2} marginBottom={3}>
 				<SaleSummary
-					name="Sales"
+					name="Vendido"
 					value={data
 						.filter((sale) => sale.status != "falha")
 						.reduce((sum, sale) => sum + sale.preco, 0)}
 				/>
 				<SaleSummary
-					name="Received"
+					name="Recebido"
 					value={data
 						.filter((sale) => sale.status === "pago")
 						.reduce((sum, sale) => sum + sale.preco, 0)}
 				/>
 				<SaleSummary
-					name="Processing"
+					name="Processando"
 					value={data
 						.filter((sale) => sale.status === "processando")
 						.reduce((sum, sale) => sum + sale.preco, 0)}

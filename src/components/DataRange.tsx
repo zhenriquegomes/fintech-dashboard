@@ -7,7 +7,7 @@ const DateRange = () => {
 		<Paper sx={{ width: "fit-content", padding: 2 }} elevation={3}>
 			<Stack direction="row" spacing={2}>
 				<Box>
-					<InputLabel>Initial Date</InputLabel>
+					<InputLabel>Data Inicial</InputLabel>
 					<Input
 						type="date"
 						value={initialDate}
@@ -15,7 +15,7 @@ const DateRange = () => {
 					/>
 				</Box>
 				<Box>
-					<InputLabel>Final Date</InputLabel>
+					<InputLabel>Data Final</InputLabel>
 					<Input
 						type="date"
 						value={finalDate}

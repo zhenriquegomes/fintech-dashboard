@@ -5,7 +5,7 @@ const SaleSummary = ({ name, value }: { name: string; value: number }) => {
 		<Paper sx={{ padding: 1, width: "10rem" }} elevation={3}>
 			<Typography variant="h5">{name}</Typography>
 			<Typography>
-				{value.toLocaleString("en", { style: "currency", currency: "USD" })}
+				{value.toLocaleString("pt-br", { style: "currency", currency: "BRL" })}
 			</Typography>
 		</Paper>
 	);

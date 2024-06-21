@@ -1,7 +1,7 @@
 import { Box, Container } from "@mui/material";
 import Header from "./components/Header";
 import Summary from "./pages/Summary";
-import SalesList from "./components/SalesList";
+import SalesList from "./pages/SalesList";
 import BottomNav from "./components/BottomNav";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import SaleDetails from "./pages/SaleDetails";

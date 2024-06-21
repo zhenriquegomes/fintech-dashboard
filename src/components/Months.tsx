@@ -6,7 +6,7 @@ const Months = () => {
 	function getNthMonthName(n: number): string {
 		const date = new Date();
 		date.setMonth(date.getMonth() + n);
-		return date.toLocaleString("en", { month: "long" });
+		return date.toLocaleString("pt-br", { month: "long" });
 	}
 	function formatDate(date: Date): string {
 		const year = date.getFullYear();

@@ -25,8 +25,8 @@ const SalesList = () => {
 				<TableHead>
 					<TableRow>
 						<TableCell>ID</TableCell>
-						<TableCell>Name</TableCell>
-						<TableCell>Price</TableCell>
+						<TableCell>Nome</TableCell>
+						<TableCell>Preço</TableCell>
 					</TableRow>
 				</TableHead>
 				<TableBody>
