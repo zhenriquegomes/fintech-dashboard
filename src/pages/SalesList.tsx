@@ -34,7 +34,7 @@ const SalesList = () => {
 						<TableRow
 							key={sale.id}
 							component={Link}
-							to={`/sales/${sale.id}`}
+							to={`/fintech-dashboard/sales/${sale.id}`}
 							hover={true}
 							sx={{ textDecoration: "none" }}
 						>

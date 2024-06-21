@@ -35,14 +35,14 @@ export default function BottomNav() {
 			>
 				<BottomNavigationAction
 					component={Link}
-					to="/"
+					to="/fintech-dashboard"
 					label="Resumo"
 					showLabel={true}
 					icon={<Receipt />}
 				/>
 				<BottomNavigationAction
 					component={Link}
-					to="/sales"
+					to="/fintech-dashboard/sales"
 					label="Vendas"
 					showLabel={true}
 					icon={<MonetizationOn />}

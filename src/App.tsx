@@ -13,9 +13,12 @@ function App() {
 				<Box>
 					<Header />
 					<Routes>
-						<Route path="/" element={<Summary />} />
-						<Route path="/sales" element={<SalesList />} />
-						<Route path="/sales/:id" element={<SaleDetails />} />
+						<Route path="/fintech-dashboard" element={<Summary />} />
+						<Route path="/fintech-dashboard/sales" element={<SalesList />} />
+						<Route
+							path="/fintech-dashboard/sales/:id"
+							element={<SaleDetails />}
+						/>
 					</Routes>
 				</Box>
 				<BottomNav />

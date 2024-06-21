@@ -12,7 +12,7 @@ const SaleDetails = () => {
 	if (!data) return null;
 	return (
 		<Box>
-			<Link to="/sales">
+			<Link to="/fintech-dashboard/sales">
 				<Button sx={{ marginBottom: 2 }} variant="outlined">
 					Voltar
 				</Button>
