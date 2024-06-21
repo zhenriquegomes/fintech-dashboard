@@ -31,12 +31,14 @@ const SalesList = () => {
 				</TableHead>
 				<TableBody>
 					{data.map((sale) => (
-						<TableRow key={sale.id}>
-							<TableCell>
-								<Link to={`/sales/${sale.id}`} style={{ color: "inherit" }}>
-									{sale.id}
-								</Link>
-							</TableCell>
+						<TableRow
+							key={sale.id}
+							component={Link}
+							to={`/sales/${sale.id}`}
+							hover={true}
+							sx={{ textDecoration: "none" }}
+						>
+							<TableCell>{sale.id}</TableCell>
 							<TableCell>{sale.nome}</TableCell>
 							<TableCell>
 								{sale.preco.toLocaleString("en", {
